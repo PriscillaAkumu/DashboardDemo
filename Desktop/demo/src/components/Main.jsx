@@ -22,8 +22,14 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import SwapVertIcon from '@mui/icons-material/SwapVert';
 import Img from "../assets/logo.webp";
 
+import Grid from '@mui/material/Grid';
+// eslint-disable-next-line
+import Paper from '@mui/material/Paper';
+import Divider from '@mui/material/Divider';
 
-// import Content from "../components/Content";
+ import Content from "../components/Content";
+ import Theme from "../components/Theme";
+// import Card from '../components/Card';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
@@ -74,12 +80,12 @@ function ResponsiveDrawer(props) {
 
           <Typography
             color="#fff"
-            variant="h5"
+            variant="h6"
             sx={{ fontWeight: "600", color: "#111122" }}
           >
             Systems Manager
           </Typography>
-          <Typography color="#111122" variant="h5">
+          <Typography color="#111122" variant="h6">
             ADMIN
           </Typography>
         </Stack>
@@ -182,7 +188,7 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h4" noWrap component="div" sx={{fontWeight:'700', color: "#111122"}}>
+          <Typography variant="h5" noWrap component="div" sx={{fontWeight:'700', color: "#111122"}}>
             Welcome To The ToolBox
           </Typography>
 
@@ -231,14 +237,24 @@ function ResponsiveDrawer(props) {
       <Box
         component="main"
         sx={{
-          overflowX: "auto",
-          flexGrow: 1,
+          // overflow: "auto",
+          // // flexGrow: 1,
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
-        <Toolbar />
 
+
+            <Typography variant="h6" component="div"  >
+          Welcome To The ToolBox
+        </Typography>
+
+
+        <Divider />
+         <Theme/>
+         <Grid style={{marginTop: '20px'}}>
+        <Content/>
+       </Grid>
       </Box>
     </Box>
   );
